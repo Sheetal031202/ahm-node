@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<div class="mt-4">
+  <h2>Welcome, <%= user.username %> 👋</h2>
+  <p><strong>Email:</strong> <%= user.email %></p>
+  <p><strong>Role:</strong> <%= user.role || "Author" %></p>
+
+  <hr>
+  <a href="/posts/create" class="btn btn-primary me-2">Create New Post</a>
+  <a href="/posts" class="btn btn-secondary">View All Posts</a>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<div class="mt-4">
+  <h2>All Blog Posts</h2>
+
+  <% if(posts.length === 0){ %>
+    <p>No posts yet. <a href="/posts/create">Create one</a>.</p>
+  <% } %>
+
+  <% posts.forEach(post => { %>
+    <div class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.title %></h5>
+        <p class="card-text"><%= post.body %></p>
+        <small class="text-muted">Author: <%= post.author.username %> | Created: <%= post.createdAt.toDateString() %></small>
+      </div>
+    </div>
+  <% }) %>
+
+  <a href="/posts/create" class="btn btn-primary mt-3">Create New Post</a>
+</div>
+
+<%- include('../partials/footer') %>
