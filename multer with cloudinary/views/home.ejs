@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2>hello</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" >
+        <button type="submit">Upload</button>
+    </form>
+
+    <div class="">
+<%if(url){%>
+<h2>file upload</h2>
+<img src="<%=url%>"" width="300px" height="200px" alt="">
+<%} %>
+    </div>
+</body>
+</html>
